@@ -8,7 +8,9 @@
     "lint": "eslint '**/*.js'",
     "test": "jest --verbose",
     "test-watch": "jest --watchAll --verbose",
-    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+    "startDB": "mkdir -p ./db && mongod --dbpath ./db",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
+    "watch": "nodemon index.js"
   },
   "jest": {
     "testEnvironment": "node"
@@ -21,16 +23,18 @@
     "eslint-plugin-react": "^7.14.3"
   },
   "dependencies": {
+    "cf-supergoose": "^1.0.2",
     "cors": "^2.8.5",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "mongodb-memory-server": "^5.1.5",
     "mongoose": "^5.6.1",
     "mongoose-schema-jsonschema": "^1.2.1",
     "morgan": "^1.9.1",
     "supertest": "^4.0.2",
     "uuid": "^3.3.2",
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "nodemon": "^1.19.1"
   }
 }
